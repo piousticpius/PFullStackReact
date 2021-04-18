@@ -17,7 +17,7 @@ this._pool.on('error',(err,client)=>{
 query(query,...args){
 this._pool.connect((err,client,done) => {
     if(err)throw err;
-    const params=args.length===2?args(0):[];
+    const params=args.length===2?args[0]:[];
     const callback=args.length===1?args[0]:args[1];
     client.query(query,params,(err,res)=>{
         done();

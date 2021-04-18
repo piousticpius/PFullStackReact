@@ -15,7 +15,7 @@ app.use('/api/cities',require('./api/cities'));
 app.use('/api/weather',require('./api/weather'));
 
 app.listen(PORT,()=>{
-    console.log('Server is listening on port '+PORT+'!!');
+    console.log('Server is listening on port  '+PORT+'!!');
 });
 
 db.query('SELECT NOW()',(err,res)=>{
